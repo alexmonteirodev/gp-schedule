@@ -1,0 +1,67 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@media (max-width: 750px) {
+    body{
+        background-color: var(--background-black);
+    }
+    #label{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+    #arrows-div{
+        display: flex;
+        gap: 5px;
+    }
+    .arrows{
+        width: 30px;
+        height: 30px;
+    }
+    #tabela{
+        display: flex;
+        justify-content: center;
+        margin-right: 5rem;
+        margin-left: 5rem;
+        border-radius: 15px;
+    }
+    .day{
+        text-align: center;
+    }
+    table {
+        border-collapse: collapse; /* Remove os espaços entre bordas */
+        width: 100%; /* Faz a tabela ocupar toda a largura do container */
+        border-collapse: collapse; /* Garante que as bordas internas não se sobreponham */
+        border-radius: 15px; /* Define o arredondamento */
+        overflow: hidden;
+        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.136);
+    }
+    th, td {
+        border: 1px solid #f4f4f4;
+        text-align: center;
+        padding: 13px;
+    }
+    th {
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+    footer{
+        display: flex;
+        justify-content: flex-end;
+    }
+    #pencil{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #f4f4f4;
+        padding: 5px;
+        margin-right: 2rem;
+        margin-top: 1rem;
+    }
+}
+/* e4e7eb4b */
