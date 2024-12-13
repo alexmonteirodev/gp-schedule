@@ -85,6 +85,7 @@
 }
 #days{
     margin-top: 2rem;
+    width: 50%;
 }
 .modal button[type="submit"]{
     display: block;
@@ -98,7 +99,7 @@
     margin-top: 25px;
     width: 80px;
     font-weight: bold;
-    background-color: var(--border);
+    background-color: var(--f4);
 
 }
 .modal button[type="submit"]:hover {
