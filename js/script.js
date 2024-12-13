@@ -6,3 +6,6 @@ initModal()
 
 import setOptions from './modules/set-options.js'
 setOptions()
+
+import lightMode from './modules/light-mode.js'
+lightMode

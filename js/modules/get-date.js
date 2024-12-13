@@ -10,32 +10,37 @@ export default function getDate() {
 
         // Função para atualizar o calendário
         function updateCalendar(month, year) {
-            // Define o título com o mês e o ano
+            const today = new Date(); // Obtém a data de hoje
+            const isToday = (day) => today.getDate() === day && today.getMonth() === month && today.getFullYear() === year;
+        
             const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             dataDisplay.textContent = `${monthNames[month]} ${year}`;
         
-            // Limpa a tabela antes de adicionar os novos dias
-            tabela.innerHTML = "";
+            tabela.innerHTML = ""; // Limpa o calendário
         
-            // Descobre o primeiro dia do mês, ajustando para começar com Monday
-            const firstDay = (new Date(year, month, 1).getDay() + 6) % 7; // Ajuste para Monday = 0
-            const lastDate = new Date(year, month + 1, 0).getDate(); // Último dia do mês
+            const firstDay = new Date(year, month, 1).getDay();
+            const lastDate = new Date(year, month + 1, 0).getDate();
         
-            let row = document.createElement("tr"); // Linha inicial
+            let row = document.createElement("tr");
         
-            // Preenche os dias vazios antes do primeiro dia
-            for (let i = 0; i < firstDay; i++) {
-                row.appendChild(document.createElement("td"));
+            // Ajusta para que o calendário comece na segunda-feira
+            const startDay = firstDay === 0 ? 6 : firstDay - 1;
+        
+            for (let i = 0; i < startDay; i++) {
+                row.appendChild(document.createElement("td")); // Dias vazios
             }
         
-            // Preenche os dias do mês
             for (let day = 1; day <= lastDate; day++) {
                 const cell = document.createElement("td");
                 const dayDiv = document.createElement("div");
                 dayDiv.classList.add("day");
                 dayDiv.textContent = day;
         
-                // Adiciona o conteúdo da célula (Manana, Tarde, Noche)
+                // Verifica se é o dia de hoje e adiciona a classe "today" apenas no número do dia
+                if (isToday(day)) {
+                    dayDiv.classList.add("today"); // Aplica a classe "today" no número do dia
+                }
+        
                 const morning = document.createElement("div");
                 morning.classList.add("manana");
                 morning.textContent = "Manana";
@@ -46,22 +51,19 @@ export default function getDate() {
                 night.classList.add("noche");
                 night.textContent = "Noche";
         
-                // Adiciona as divs dentro da célula
-                cell.appendChild(dayDiv);
+                cell.appendChild(dayDiv); // Adiciona o número do dia
                 cell.appendChild(morning);
                 cell.appendChild(afternoon);
                 cell.appendChild(night);
         
                 row.appendChild(cell);
         
-                // Quando a linha estiver completa (7 dias), adiciona ela ao corpo da tabela
                 if (row.children.length === 7) {
                     tabela.appendChild(row);
-                    row = document.createElement("tr"); // Cria uma nova linha
+                    row = document.createElement("tr");
                 }
             }
         
-            // Adiciona a última linha, caso ela não tenha sido adicionada
             if (row.children.length > 0) {
                 tabela.appendChild(row);
             }

@@ -9,8 +9,11 @@
 <body>
     <header>
         <section id="label">
-            <h1 id="data">Month Year</h1>
-            <div id="arrows-div">
+            <div class="arrows-div">
+                <h1 id="data">Month Year</h1>
+                <!-- <a href="#"><img id="light-mode" src="imgs/light-mode-black.svg" alt=""></a> -->
+            </div>
+            <div class="arrows-div">
                 <a href="#"><img class="arrows" src="imgs/seta-esquerda.svg" alt="<"></a>
                 <a href="#"><img class="arrows" src="imgs/seta-direita.svg" alt=">"></a>
             </div>
@@ -312,6 +315,7 @@
                             <option value="night">Night</option>
                             <option value="day-off">Day off</option>
                             <option value="vacations">Vacations</option>
+                            <option value="meet">Meeting</option>
                             <option value="sick">Sick</option>
                         </select>
     
@@ -321,7 +325,7 @@
                             <input type="radio" id="add" name="edit-option" value="add" checked>
                         </div>
                         <div class="radio-input">
-                            <label for="remove">Remove</label>
+                            <label for="remove">Clean</label>
                             <input type="radio" id="remove" name="edit-option" value="remove">
                         </div>
                     </div>
@@ -329,7 +333,7 @@
                         <label for="days"></label>
                         <input type="text" for="days" id="days" placeholder="Type your days like this: 1,2,3">
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="submit-button">Submit</button>
                 </form>
             </div>
         </section>

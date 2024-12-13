@@ -14,9 +14,14 @@
         margin-right: 5rem;
         margin-left: 5rem;
     }
-    #arrows-div{
+    #light-mode{
+        width: 20px;
+        height: 20px;
+    }
+    .arrows-div{
         display: flex;
         gap: 5px;
+        align-items: center;
     }
     .arrows{
         width: 30px;
@@ -31,6 +36,8 @@
     }
     .day{
         text-align: center;
+        font-weight: bold;
+        font-size: 1rem;
     }
     table {
         border-collapse: collapse; /* Remove os espaços entre bordas */
@@ -62,5 +69,21 @@
         margin-right: 2rem;
         margin-top: 1rem;
     }
-
-/* e4e7eb4b */
+    h1{
+        color: var(--background-black);
+    }
+    .day{
+        color: var(--background-black);
+    }
+    .today {
+        background-color: var(--background-black); 
+        font-weight: bold;
+        width: 25px;
+        height: 25px;
+        color: var(--background-white);
+        border-radius: 15px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
