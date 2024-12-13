@@ -4,7 +4,7 @@
 }
 @media (max-width: 750px) {
     body{
-        background-color: var(--background-black);
+        background-color: var(--background-white);
     }
     #label{
         display: flex;

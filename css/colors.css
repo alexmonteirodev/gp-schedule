@@ -1,4 +1,10 @@
 :root{
-    --background-black: white;
+    --background-black: black;
+    --background-white: white;
+    --border: #e5e7eb;
+    --gray: #757575;
+    --other: #f4f4f4;
+    
+
 
 }
