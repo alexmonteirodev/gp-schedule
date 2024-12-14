@@ -5,7 +5,6 @@ export default function lightMode(params) {
     const arrowLeft = document.querySelectorAll('.arrows')[0]
     const arrowRight = document.querySelectorAll('.arrows')[1]
 
-    console.log(arrowLeft)
     btn.addEventListener('click', turnLightMode)
 
     function turnLightMode(e) {
