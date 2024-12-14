@@ -33,7 +33,7 @@ body{
     margin-right: 5rem;
     margin-left: 5rem;
     border-radius: 15px;
-    border: 1px solid var(--f4);
+    /* border: 1px solid var(--f4); */
 }
 .day{
     text-align: center;
@@ -47,6 +47,7 @@ table {
     border-radius: 15px; /* Define o arredondamento */
     overflow: hidden;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.136);
+
 }
 th, td {
     border: 1px solid var(--f4);
