@@ -33,6 +33,7 @@
         margin-right: 5rem;
         margin-left: 5rem;
         border-radius: 15px;
+        border: 1px solid var(--f4);
     }
     .day{
         text-align: center;

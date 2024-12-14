@@ -51,6 +51,7 @@
 .modal label{
     display: block;
     font-weight:500;
+    color: var(--background-black);
 }
 .modal input{
     width: 100%;
