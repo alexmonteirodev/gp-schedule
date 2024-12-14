@@ -1,8 +1,11 @@
 export default function lightMode(params) {
-    const btn = document.querySelector('#light-mode')
+    const btn = document.querySelector('#light-button')
     const root = document.documentElement
-    const lightSvg = btn.querySelector('img')
-    console.log(btn.src)
+    const lightSvg = document.querySelector('#light-mode')
+    const arrowLeft = document.querySelectorAll('.arrows')[0]
+    const arrowRight = document.querySelectorAll('.arrows')[1]
+
+    console.log(arrowLeft)
     btn.addEventListener('click', turnLightMode)
 
     function turnLightMode(e) {
@@ -12,12 +15,18 @@ export default function lightMode(params) {
             root.style.setProperty('--background-white', '#08090A')
             root.style.setProperty('--background-black', '#FFFFFF')
             root.style.setProperty('--border', '#262626')
-            lightSvg.src = 'imgs/light-mode-black.svg'
+            lightSvg.src = 'imgs/light-mode-white.svg'
+            arrowLeft.src = 'imgs/seta-esquerda-white.svg'
+            arrowRight.src = 'imgs/seta-direita-white.svg'
+
         } else{
             root.style.setProperty('--background-white', '#FFFFFF')
             root.style.setProperty('--background-black', '#08090A')
             root.style.setProperty('--border', '#e5e7eb')
-            lightSvg.src = 'imgs/light-mode-white.svg'
+            lightSvg.src = 'imgs/light-mode-black.svg'
+            arrowLeft.src = 'imgs/seta-esquerda.svg'
+            arrowRight.src = 'imgs/seta-direita.svg'
+
         }
     }
 }

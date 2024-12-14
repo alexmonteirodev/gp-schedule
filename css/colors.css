@@ -4,7 +4,10 @@
     --border: #e5e7eb;
     --gray: #757575;
     --f4: #f4f4f4;
-    
+    --box-shadow-black: rgba(0, 0, 0, 0.136);
+    --box-shadow-white: rgba(0, 0, 0, 0.136);
+
+
 
 
 }
