@@ -4,6 +4,7 @@
 }
 body{
     background-color: var(--background-white);
+
 }
 #label{
     display: flex;
@@ -47,13 +48,13 @@ table {
     border-radius: 15px; /* Define o arredondamento */
     overflow: hidden;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.136);
-
 }
 th, td {
     border: 1px solid var(--f4);
     text-align: center;
     padding: 25px;
 }
+
 th {
     background-color: var(--f4);
     text-align: center;
@@ -100,7 +101,6 @@ h1{
     border-radius: 15px;
     padding: 20px;
     display: none;
-
 }
 .night{
     background-color: blue;
@@ -109,8 +109,9 @@ h1{
     display: none;
 }
 @media (max-width: 750px){
-    body{
-        width: 600px;
+    table{
+        width: 90vw;
+        height: 90vh;
         margin: auto;
     }
 }

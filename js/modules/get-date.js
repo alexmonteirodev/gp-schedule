@@ -102,22 +102,22 @@ export default function getDate() {
 
         
  
+// function monthAndYear() { //escreve o mes o ano em cima no calendario
+//     // get month
+//     const monthDate = new Date()
+//     const month = monthDate.getMonth() +1
 
-//   // get month
-//   const monthDate = new Date()
-//   const month = monthDate.getMonth() +1
+//     const anualMonths = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-//   const anualMonths = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+//     const actualMonth = anualMonths[month-1]
 
-//   const actualMonth = anualMonths[month-1]
+//     // get year
+//     const yearDate = new Date()
+//     const year = yearDate.getFullYear()
 
-//   // get year
-//   const yearDate = new Date()
-//   const year = yearDate.getFullYear()
-
-//   // write
-//   const data = document.querySelector('#data')
-//   data.innerHTML = `${actualMonth} ${year}`
+//     // write
+//     const data = document.querySelector('#data')
+//     data.innerHTML = `${actualMonth} ${year}`
   
-
-    
+// }
+// monthAndYear()
