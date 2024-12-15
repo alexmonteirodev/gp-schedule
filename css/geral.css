@@ -89,3 +89,22 @@ h1{
     align-items: center;
     justify-content: center;
 }
+.morning{
+    background-color: yellow;
+    border-radius: 15px;
+    padding: 20px;
+    display: none;
+}
+.afternoon{
+    background-color: green;
+    border-radius: 15px;
+    padding: 20px;
+    display: none;
+
+}
+.night{
+    background-color: blue;
+    border-radius: 15px;
+    padding: 20px;
+    display: none;
+}

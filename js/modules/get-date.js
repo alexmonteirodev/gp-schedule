@@ -42,14 +42,14 @@ export default function getDate() {
                 }
         
                 const morning = document.createElement("div");
-                morning.classList.add("manana");
-                morning.textContent = "Manana";
+                morning.classList.add("morning");
+                morning.textContent = "Morning";
                 const afternoon = document.createElement("div");
-                afternoon.classList.add("tarde");
-                afternoon.textContent = "Tarde";
+                afternoon.classList.add("afternoon");
+                afternoon.textContent = "Afternoon";
                 const night = document.createElement("div");
-                night.classList.add("noche");
-                night.textContent = "Noche";
+                night.classList.add("night");
+                night.textContent = "Night";
         
                 cell.appendChild(dayDiv); // Adiciona o número do dia
                 cell.appendChild(morning);
@@ -69,6 +69,14 @@ export default function getDate() {
             }
         }
 
+        // Event listeners para as setas de navegação
+        arrows[0].addEventListener("click", function() {
+            navigateMonth('prev');
+        });
+        arrows[1].addEventListener("click", function() {
+            navigateMonth('next');
+        });
+
         // Função para navegar entre os meses
         function navigateMonth(direction) {
             if (direction === 'next') {
@@ -87,18 +95,13 @@ export default function getDate() {
             updateCalendar(currentMonth, currentYear);
         }
 
-        // Event listeners para as setas de navegação
-        arrows[0].addEventListener("click", function() {
-            navigateMonth('prev');
-        });
-        arrows[1].addEventListener("click", function() {
-            navigateMonth('next');
-        });
-
         // Inicializa o calendário com o mês e ano atuais
         updateCalendar(currentMonth, currentYear);
     });
 }
+
+        
+ 
 
 //   // get month
 //   const monthDate = new Date()
