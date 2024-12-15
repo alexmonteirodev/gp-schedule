@@ -11,7 +11,7 @@ export default function lightMode(params) {
         btn.classList.toggle('light-active')
         e.preventDefault()
         if (btn.classList.contains('light-active')) {
-            root.style.setProperty('--background-white', '#08090A')
+            root.style.setProperty('--background-white', '#282828')
             root.style.setProperty('--background-black', '#FFFFFF')
             root.style.setProperty('--border', '#262626')
             lightSvg.src = 'imgs/light-mode-white.svg'
@@ -20,7 +20,7 @@ export default function lightMode(params) {
 
         } else{
             root.style.setProperty('--background-white', '#FFFFFF')
-            root.style.setProperty('--background-black', '#08090A')
+            root.style.setProperty('--background-black', '#282828')
             root.style.setProperty('--border', '#e5e7eb')
             lightSvg.src = 'imgs/light-mode-black.svg'
             arrowLeft.src = 'imgs/seta-esquerda.svg'
